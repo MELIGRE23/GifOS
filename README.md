@@ -1,0 +1,2 @@
+# GifOS
+Proyecto de estudio

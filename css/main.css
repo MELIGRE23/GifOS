@@ -1,0 +1,30 @@
+.container {
+  width: 1194px;
+  margin: auto;
+}
+
+
+.d-flex {
+  display: flex;
+} 
+
+.col-2 {
+  width: 20%;
+}
+.hide {
+  display: none;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+#listGif {
+  display: flex; 
+}
+
+.flechita {
+  position: relative;
+  right: 6px;
+}

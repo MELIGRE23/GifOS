@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>GifOs</title>
+  <link rel="stylesheet" type="text/css" href="css/stylelight.css">
+  <link rel="stylesheet" type="text/css" href="css/styledark.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css">
+  <script src="js/recorder.js"></script>
+  <script src="https://www.webrtc-experiment.com/gif-recorder.js"></script>
+
+</head>
+
+<body id="body" class="dark">
+  <div class="container">
+    <p class="bienvenida"> ¡Bienvenidos / as a Gifos.com! ------ Donde los gifs están .////// Número de visitas: 12.765803
+    </p>
+
+    <header>
+      <div class="contenedor-img">
+        <img  id="logoLight" class="titulo-light hide" src="assets/gifOF_logo.png" alt="64px" height="102.6px">
+         <img id="logoDark" class="titulo-dark" src="assets/gifOF_logo_dark.png" alt="64px" height="102.6px">
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li> <button class="crear"> <a href="creargif.html" class="crear-gifos"> Crear Gifos </a> </button>
+          </li>
+
+          <li class="boton-select">
+
+            <div class="select-container">
+              <button class="elegir-tema"> <span class="p"> Elegir Tema</span> </button>
+              <button class="flechita" onclick="deplegar('listaOpciones')"> <span class="icon fas fa-caret-down"> </span> </button>
+            </div>
+
+            <div data-toggle="collapsed"  id="listaOpciones" class="hide">
+              <div class="opciones">
+                <div class="opcion"> <button onclick="changeTheme('light')" class="sailor"> Sailor Day </button></div>
+                <div class="opcion"> <button onclick="changeTheme('dark')" class="sailor"> Sailor Night </button></div>
+              </div>
+            </div>
+          </li>
+
+          <li> 
+            <a href="misgifos.html" id="misgifos"> Mis Gifos </a>
+            <img src="" id="mygif" alt="" srcset="">
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="buscador">
+
+      <h1> Buscar </h1>
+      <div class="wrap-search">
+
+        <input type="search" onkeyup="mostrarDiv('content-search')" id="input-search" placeholder="Buscar gifs, hashtags, temas, busca lo que quieras...">
+
+        <button onclick="getData()">
+          <img src="assets/lupa.svg" height="16px" width="16px" alt="lupa">
+          <p>Buscar</p>
+        </button>
+      </div>
+      
+      <div id="content-search" class="hide">
+        <div id="content-table">
+          <table width="100%">
+            <tbody>
+              <tr>
+                <td>
+                  <p> Resultado de busqueda sugerido </p>
+                </td>
+              </tr>
+
+              <tr id="listGif">
+              </tr>
+
+              <tr>
+                <td>
+                  <p> Un resultado similar de búsqueda </p>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <p> Y otro más </p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <section id="">
+      <h2 class=""> </h2>
+    </section>
+  </div>
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/recorderRtc.js"></script>
+
+</body>
+
+</html>
