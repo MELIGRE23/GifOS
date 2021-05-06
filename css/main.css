@@ -28,3 +28,8 @@
   position: relative;
   right: 6px;
 }
+
+iframe {
+  overflow-x: hidden;
+  overflow-Y: hidden;
+}

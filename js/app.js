@@ -1,9 +1,30 @@
+var storageClass
+
+function initTheme ( ) {
+  var storageClass = localStorage.getItem ("className");
+  if (storageClass) {
+    changeTheme (storageClass);
+  }
+}
+initTheme ();
+
 function changeTheme (className) {
   const bodySelector = document.querySelector('#body');
   const logoLight = document.querySelector('#logoLight');
   const logoDark = document.querySelector('#logoDark');
 
-  document.getElementById('content-search').classList.add('hide')
+
+  var contentSearchClass = document.getElementsByClassName('content-search');
+  if (contentSearchClass.length > 0) {   
+    document.getElementById('content-search').classList.add('hide');
+  }
+
+  var mySearch = document.getElementById("buscador");
+    if(mySearch){
+      document.getElementById ('listaOpciones').classList.add ('hide')
+    }
+   
+
   if (className == "dark") {
     bodySelector.classList.remove("light");
     /* MUESTRO EL LOGO DARK Y OCULTO DE LIGHT */
@@ -16,8 +37,11 @@ function changeTheme (className) {
     logoDark.classList.add('hide')
   }
 
+  localStorage.setItem("className", className);
+/* tema seleccionado se guarda en el storage*/ 
   document.querySelector('body').classList.add(className)
 }
+
 
 function deplegar (idDiv) {
   var listaOpciones = document.getElementById(idDiv)
@@ -25,7 +49,7 @@ function deplegar (idDiv) {
   if (className === 'hide') {
     listaOpciones.classList.remove("hide");
   } else {
-    listaOpciones.classList.add('hide')
+    listaOpciones.classList.add('hide');
   }
 }
 

@@ -32,7 +32,7 @@ function postData () {
     file: urlImage,
     api_key: keyGiphy,
     tags: 'meligif',
-    username: 'francomarquez94c2'
+    username: 'meligre23'
   }
   callApi( postApi , 'POST' , ojGif )
 }
@@ -48,11 +48,11 @@ function showData (listData) {
       if (init == '0') {
         response += '<div class="row">'
       }
-          response+= '<div class="col-2">'
+          response+= '<div class="col-3">'
             response+= '<h4>'+parseListData.data[index].title+'</h4>'
-            response+= '<iframe src='+parseListData.data[index].embed_url+" width='280px' height='280px' ></iframe>"
+            response+= '<iframe src="'+parseListData.data[index].embed_url+'" width="100%" height="300px"style=" style="overflow:hidden" scrolling="no" frameborder ="0" > </iframe>'
           response+= '</div>'
-      
+
       init++
       if (init == '4') {
         response += '</div>'

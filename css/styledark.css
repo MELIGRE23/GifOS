@@ -61,7 +61,7 @@ body.dark li {
 }
 
 body.dark .select-container .elegir-tema {
-    background: #EE3EFE;
+    background:#F7C9F3 ;
     border: 1px solid #110038;
     box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
     width: 131px;
@@ -192,7 +192,7 @@ body.dark #buscador {
 .wrap-search {
     display: flex;
     width: 100%;
-    padding: 10px 12px;
+    padding: 10px 0px;
 }
 .wrap-search input#input-search {
     height: 29px;
